@@ -1,7 +1,7 @@
 body{
     background-image:url("circles-dark.png") 
 }
-h1,h3{
+h1,h2,h3{
     color: red;
     text-transform: uppercase;
 }
@@ -12,7 +12,7 @@ figcaption{
 
 section{
     font-family: 'Roboto', sans-serif;
-    font-size: 12;
+    font-size: 12px;
     margin-left: 5%;
 }
 p,h4{
