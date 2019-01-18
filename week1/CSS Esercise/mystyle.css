@@ -1,9 +1,9 @@
 body{
-    background-image:url("positive.png") 
+    background-image:url("circles-dark.png") 
 }
-h1,h2,h3{
+h1,h3{
     color: red;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 figcaption{
@@ -15,9 +15,15 @@ section{
     font-size: 12;
     margin-left: 5%;
 }
+p,h4{
+    margin-left: 5%;
+}
+figure{
+    margin-left: 10%;
+}
 a{
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 ul{
     list-style-type: none;
