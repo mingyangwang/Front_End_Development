@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap Exercise</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+			integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row"><h1>Registration</h1></div>
+
+			<form id="myform">
+				<div class="row">
+					<div class="form-group col">
+						<label for="firstname">First Name</label>
+						<input
+							type="text"
+							class="form-control"
+							id="firstname"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter your first name"
+							minlength="2"
+							maxlength="40"
+							required
+						/>
+					</div>
+					<div class="form-group col">
+						<label for="lastname">Last Name</label>
+						<input
+							type="text"
+							class="form-control"
+							id="lastname"
+							name="lastname"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter your last name"
+							minlength="2"
+							maxlength="40"
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col">
+						<label for="street">Street address</label>
+						<input
+							type="text"
+							class="form-control"
+							id="street"
+							name="street"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter street address"
+							minlength="5"
+							maxlength="50"
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col">
+						<label for="inputPostCode">Postal code</label>
+						<input
+							type="number"
+							class="form-control"
+							id="inputPostCode"
+							name="inputPostCode"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter postal code"
+							required
+						/>
+					</div>
+					<div class="form-group col">
+						<label for="inputCountry">Country</label>
+						<input
+							type="text"
+							class="form-control"
+							id="inputCountry"
+							name="inputCountry"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter country"
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col">
+						<label for="inputCompany">Company</label>
+						<input
+							type="text"
+							class="form-control"
+							id="inputCompany"
+							name="nputCompany"
+							data-toggle="tooltip"
+							placeholder="Enter company"
+							required
+						/>
+					</div>
+					<div class="form-group col">
+						<label for="inputAddress">Email address</label>
+						<input
+							type="email"
+							class="form-control"
+							id="inputAddress"
+							name="inputAddress"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter email"
+							required
+						/>
+					</div>
+				</div>
+
+				<fieldset class="form-group">
+					<label>Payment method</label>
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="radio"
+							name="exampleRadios"
+							id="exampleRadios1"
+							value="option1"
+							checked
+						/>
+						<label class="form-check-label" for="exampleRadios1">
+							Mastercard
+						</label>
+					</div>
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="radio"
+							name="exampleRadios"
+							id="exampleRadios2"
+							value="option2"
+						/>
+						<label class="form-check-label" for="exampleRadios2"> Visa </label>
+					</div>
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="radio"
+							name="exampleRadios"
+							id="exampleRadios3"
+							value="option3"
+						/>
+						<label class="form-check-label" for="exampleRadios3">
+							Billing
+						</label>
+					</div>
+				</fieldset>
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+			integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+			integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
+
+		<script>
+			$(function() {
+				$('[data-toggle="tooltip"]').tooltip();
+				$("#myform").validate({
+					rules: {
+						inputPostCode: {
+							required: true,
+							number: true
+						}
+						// lastname: {
+						// 	required: true,
+						// 	minlength: 2,
+						// 	maxlength: 40
+						// }
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
