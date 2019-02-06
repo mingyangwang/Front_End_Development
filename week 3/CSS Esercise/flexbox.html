@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Flexbox</title>
+		<style>
+			.flex-container {
+				display: flex;
+				background-color: lightBlue;
+				align-items: center;
+			}
+			.flex-container > div {
+				background-color: white;
+				margin: 10px;
+				padding: 20px;
+				font-size: 30px;
+				border: 2px solid gray;
+			}
+			@media only screen and (max-width: 600px) {
+				.flex-container {
+					flex-direction: column;
+					background-color: white;
+				}
+
+				.flex-container > div {
+					background-color: lightblue;
+					text-align: center;
+					line-height: 75px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Using Flexbox</h1>
+		<div class="flex-container">
+			<div>This is the first section.</div>
+			<div>Here is some more text.</div>
+			<div>Text coninues in this section.</div>
+			<div>Is there more coming?</div>
+			<div>This is the final section.</div>
+		</div>
+	</body>
+</html>
