@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery plugins select2</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+			integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css"
+			rel="stylesheet"
+		/>
+		<style>
+			.select2-selection.select2-selection--single,
+			.select2-container--default
+				.select2-selection--single
+				.select2-selection__arrow {
+				height: calc(2.25rem + 2px) !important;
+			}
+
+			.select2-container--default
+				.select2-selection--single
+				.select2-selection__rendered {
+				line-height: calc(2.25rem + 2px) !important;
+			}
+
+			.select2-container--default .select2-selection--single {
+				border: 1px solid #ced4da !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row"><h1>Registration</h1></div>
+
+			<form id="myform">
+				<div class="row">
+					<div class="form-group col">
+						<label for="firstname">First Name</label>
+						<input
+							type="text"
+							class="form-control"
+							id="firstname"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter your first name"
+							minlength="2"
+							maxlength="40"
+							required
+						/>
+					</div>
+					<div class="form-group col">
+						<label for="lastname">Last Name</label>
+						<input
+							type="text"
+							class="form-control"
+							id="lastname"
+							name="lastname"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter your last name"
+							minlength="2"
+							maxlength="40"
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col">
+						<label for="street">Street address</label>
+						<input
+							type="text"
+							class="form-control"
+							id="street"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter street address"
+							minlength="5"
+							maxlength="50"
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col">
+						<label for="inputPostCode">Postal code</label>
+						<input
+							type="number"
+							class="form-control"
+							id="inputPostCode"
+							name="inputPostCode"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter postal code"
+						/>
+					</div>
+					<div class="form-group col">
+						<label for="inputCountry">Country</label>
+						<select
+							class="form-control select-country"
+							id="inputCountry"
+							name="inputCountry"
+						>
+						</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col">
+						<label for="inputCompany">Company</label>
+						<input
+							type="text"
+							class="form-control"
+							id="nputCompany"
+							data-toggle="tooltip"
+							placeholder="Enter company"
+							required
+						/>
+					</div>
+					<div class="form-group col">
+						<label for="inputAddress">Email address</label>
+						<input
+							type="email"
+							class="form-control"
+							id="inputAddress"
+							data-toggle="tooltip"
+							data-html="true"
+							placeholder="Enter email"
+							required
+						/>
+					</div>
+				</div>
+
+				<fieldset class="form-group">
+					<label>Payment method</label>
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="radio"
+							name="exampleRadios"
+							id="exampleRadios1"
+							value="option1"
+							checked
+						/>
+						<label class="form-check-label" for="exampleRadios1">
+							Mastercard
+						</label>
+					</div>
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="radio"
+							name="exampleRadios"
+							id="exampleRadios2"
+							value="option2"
+						/>
+						<label class="form-check-label" for="exampleRadios2"> Visa </label>
+					</div>
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="radio"
+							name="exampleRadios"
+							id="exampleRadios3"
+							value="option3"
+						/>
+						<label class="form-check-label" for="exampleRadios3">
+							Billing
+						</label>
+					</div>
+				</fieldset>
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+			integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+			integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.get("https://restcountries.eu/rest/v2/all", function(data) {
+					$(".select-country").select2({
+						matcher: (params, data) => {
+							// If there are no search terms, return all of the data
+							if ($.trim(params.term) === "") {
+								return data;
+							}
+
+							// Do not display the item if there is no 'text' property
+							if (typeof data.text === "undefined") {
+								return null;
+							}
+
+							// `params.term` should be the term that is used for searching
+							// `data.text` is the text that is displayed for the data object
+							if (
+								data.text.toLowerCase().startsWith(params.term.toLowerCase())
+							) {
+								var modifiedData = $.extend({}, data, true);
+
+								// You can return modified objects from here
+								// This includes matching the `children` how you want in nested data sets
+								return modifiedData;
+							}
+
+							// Return `null` if the term should not be displayed
+							return null;
+						},
+						data: data.map(currentObj => {
+							return {
+								id: currentObj.alpha2Code,
+								text: currentObj.name
+							};
+						})
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
